@@ -51,7 +51,7 @@
                 "Royalcms\\Component\\Elasticsearch\\ElasticsearchServiceProvider"
             ],
             "aliases": {
-                "Elasticsearch": "Royalcms\\Component\\Elasticsearch\\Facades\\Elasticsearch"
+                "RC_Elasticsearch": "Royalcms\\Component\\Elasticsearch\\Facades\\Elasticsearch"
             }
         }
     },
