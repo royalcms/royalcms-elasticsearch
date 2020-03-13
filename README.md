@@ -53,14 +53,14 @@ $return = $client->index($data);
 现在，您可以将后两行替换为：
 
 ```php
-$return = Elasticsearch::index($data);
+$return = RC_Elasticsearch::index($data);
 ```
 这将在默认连接上运行命令。 您可以在以下位置运行命令
 任何连接（请参见 `defaultConnection` 设置和 `connections` 数组
 配置文件）。
 
 ```php
-$return = Elasticsearch::connection('connectionName')->index($data);
+$return = RC_Elasticsearch::connection('connectionName')->index($data);
 ```
 
 ## 高级用法
@@ -74,22 +74,22 @@ CRUD操作，但您可以通过编程方式监视弹性集群的运行状况，
 要获取索引的统计信息：
 
 ```php
-$stats = Elasticsearch::indices()->stats(['index' => 'my_index']);
-$stats = Elasticsearch::nodes()->stats();
-$stats = Elasticsearch::cluster()->stats();
+$stats = RC_Elasticsearch::indices()->stats(['index' => 'my_index']);
+$stats = RC_Elasticsearch::nodes()->stats();
+$stats = RC_Elasticsearch::cluster()->stats();
 ```
 
 要创建和还原快照（请首先阅读有关创建存储库路径和插件的Elastic文档）：
 
 ```php
-$response = Elasticsearch::snapshots()->create($params);
-$response = Elasticsearch::snapshots()->restore($params);
+$response = RC_Elasticsearch::snapshots()->create($params);
+$response = RC_Elasticsearch::snapshots()->restore($params);
 ```
 
 要删除整个索引（请注意！）：
 
 ```php
-$response = Elasticsearch::indices()->delete(['index' => 'my_index']);
+$response = RC_Elasticsearch::indices()->delete(['index' => 'my_index']);
 ```
 
 请记住，此软件包是许多非常复杂且有据可查的Elastic功能的薄包装。 
