@@ -50,7 +50,7 @@ class ElasticsearchServiceProvider extends BaseServiceProvider
 
     protected function setUpConfig()
     {
-        $source = dirname(dirname(dirname(__DIR__))) . '/config/elasticsearch.php';
+        $source = dirname(dirname(dirname(dirname(__DIR__)))) . '/config/elasticsearch.php';
 
         $this->publishes([$source => config_path('elasticsearch.php')], 'config');
 
