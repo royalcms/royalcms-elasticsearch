@@ -1,0 +1,63 @@
+{
+    "name": "royalcms/elasticsearch",
+    "description": "An easy way to use the official PHP ElasticSearch client in your Royalcms applications.",
+    "keywords": [
+        "laravel",
+        "royalcms",
+        "elasticsearch",
+        "search",
+        "client"
+    ],
+    "homepage": "https://github.com/royalcms/royalcms-elasticsearch",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Royal Wang",
+            "email": "hxroyal@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "elasticsearch/elasticsearch": "^7.0",
+        "illuminate/support": "^6.0|^7.0",
+        "illuminate/contracts": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "limedeck/phpunit-detailed-printer": "^5.0",
+        "orchestra/testbench": "^4.0|^5.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Royalcms\\Component\\Elasticsearch\\": "src/Royalcms/Component/Elasticsearch"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Royalcms\\Component\\Elasticsearch\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "7.0-dev"
+        },
+        "royalcms": {
+            "providers": [
+                "Royalcms\\Component\\Elasticsearch\\ElasticsearchServiceProvider"
+            ],
+            "aliases": {
+                "Elasticsearch": "Royalcms\\Component\\Elasticsearch\\Facades\\Elasticsearch"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    }
+}
