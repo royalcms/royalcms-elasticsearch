@@ -1,7 +1,9 @@
-<?php namespace Cviebrock\LaravelElasticsearch\Tests;
+<?php
 
-use Cviebrock\LaravelElasticsearch\Factory;
-use Cviebrock\LaravelElasticsearch\Manager;
+namespace Royalcms\Component\Elasticsearch\Tests;
+
+use Royalcms\Component\Elasticsearch\Factory;
+use Royalcms\Component\Elasticsearch\Manager;
 use Elasticsearch;
 use Elasticsearch\Client;
 

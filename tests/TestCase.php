@@ -1,7 +1,9 @@
-<?php namespace Cviebrock\LaravelElasticsearch\Tests;
+<?php
 
-use Cviebrock\LaravelElasticsearch\Facade;
-use Cviebrock\LaravelElasticsearch\ServiceProvider;
+namespace Royalcms\Component\Elasticsearch\Tests;
+
+use Royalcms\Component\Elasticsearch\Facades\Elasticsearch;
+use Royalcms\Component\Elasticsearch\ElasticsearchServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 
@@ -19,7 +21,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            ServiceProvider::class,
+            ElasticsearchServiceProvider::class,
         ];
     }
 
@@ -29,7 +31,7 @@ abstract class TestCase extends Orchestra
     protected function getPackageAliases($app)
     {
         return [
-            'Elasticsearch' => Facade::class,
+            'RC_Elasticsearch' => Elasticsearch::class,
         ];
     }
 }
